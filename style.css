@@ -1,0 +1,483 @@
+body {
+  background-color:#EDE7F6; /* Updated from #ffe5ec to light lavender */
+}
+
+.candle-count-display {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFFFFF; /* Updated from #f0e4d0 to white */
+  background-color: #f4c5d4; /* Updated from #ff8fab to rich amethyst */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #fff; /* Updated from #ffc2d1 to soft lavender gray */
+}
+
+.candle-count-display span {
+  font-weight: bold;
+  color: #AD030F; /* Leaving this unchanged – if needed, you can update it later */
+}
+
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -125px;
+}
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color:  #fff; /* Updated from #ffc2d1 to pastel purple */
+  box-shadow: 0 2px 0px #F8BBD0, 0 4px 0px #F8BBD0, 0 6px 0px #F8BBD0, 0 8px 0px #F8BBD0,
+              0 10px 0px #F8BBD0, 0 12px 0px #F8BBD0, 0 14px 0px #F8BBD0, 0 16px 0px #F8BBD0,
+              0 18px 0px #F8BBD0, 0 20px 0px #F8BBD0, 0 22px 0px #F8BBD0, 0 24px 0px #F8BBD0,
+              0 26px 0px #F8BBD0, 0 28px 0px #F8BBD0, 0 30px 0px #F8BBD0;
+}
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #EDE7F6; /* Updated from #f0e4d0 to light lavender */
+  width: 240px;
+  height: 90px;
+  border-radius: 50%;
+}
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: #fff; /* Updated from #f4ebdc to very pale lavender */
+  box-shadow: 0 0 4px #fff, 0 0 4px #fff, 0 0 4px #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.drip {
+  display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #EDE7F6; /* Updated from #f0e4d0 to light lavender */
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.candle {
+  background-color: #f4c5d4; /* Updated from #7B020B to deep indigo purple */
+  width: 12px;
+  height: 35px;
+  border-radius: 6px/3px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f4c5d4; /* Updated from #ad030f to a lighter complementary purple */
+}
+
+.candle.out .flame {
+  display: none;
+}
+
+.flame {
+  position: absolute;
+  background-color: #F1C40F; /* Updated from orange to warm yellow */
+  width: 10px;
+  height: 25px;
+  border-radius: 8px 8px 8px 8px/20px 20px 8px 8px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(241, 196, 15, 0.5), 0 0 20px rgba(241, 196, 15, 0.5),
+              0 0 60px rgba(241, 196, 15, 0.5), 0 0 80px rgba(241, 196, 15, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.2), 0 0 20px rgba(241, 196, 15, 0.2),
+                0 0 60px rgba(241, 196, 15, 0.2), 0 0 80px rgba(241, 196, 15, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5), 0 0 20px rgba(241, 196, 15, 0.5),
+                0 0 60px rgba(241, 196, 15, 0.5), 0 0 80px rgba(241, 196, 15, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.3), 0 0 20px rgba(241, 196, 15, 0.3),
+                0 0 60px rgba(241, 196, 15, 0.3), 0 0 80px rgba(241, 196, 15, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.4), 0 0 20px rgba(241, 196, 15, 0.4),
+                0 0 60px rgba(241, 196, 15, 0.4), 0 0 80px rgba(241, 196, 15, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5), 0 0 20px rgba(241, 196, 15, 0.5),
+                0 0 60px rgba(241, 196, 15, 0.5), 0 0 80px rgba(241, 196, 15, 0.5);
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff; /* Updated from #f8f9fa to light lavender */
+  color: #f4c5d4; /* Updated from #fb6f92 to deep indigo */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  animation: blink 1s linear infinite;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* --- New Styles for Controls and Modal --- */
+.controls {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.controls button {
+  background-color: #f4c5d4; /* Updated from #ff8fab to rich amethyst */
+  color: #FFFFFF; /* Updated from #f0e4d0 to white */
+  border: 2px solid #fff; /* Updated from #ffc2d1 to soft lavender gray */
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+  background-color: #F8BBD0; /* A slightly darker purple for hover */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+
+/* Balloon Container: covers the viewport and hides overflowing balloons */
+.balloon-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Balloon Container: covers the viewport */
+.balloon-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* Allows clicks to pass through */
+  overflow: hidden;
+}
+
+/* Base Balloon Style */
+.balloon {
+  position: absolute;
+  top: -150px; /* Start above the viewport */
+  width: 100px;
+  height: 140px;
+  background: radial-gradient(circle, #f4c5d4, #F8BBD0); /* Original purple gradient */
+  border-radius: 50%;
+  opacity: 0.9;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Rope Under Balloon */
+.rope-svg {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  bottom: -60px; /* Just below the balloon */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- Random Drop Animations --- */
+
+/* Animation Option 1 */
+@keyframes dropDownRandom1 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(60px) translateY(25vh);
+  }
+  60% {
+    transform: translateX(-70px) translateY(50vh);
+  }
+  95% {
+    transform: translateX(30px) translateY(75vh);
+  }
+  100% {
+    transform: translateX(10) translateY(calc(100vh + 150px));
+    opacity: 0;
+  }
+}
+
+/* Animation Option 2 */
+@keyframes dropDownRandom2 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  35% {
+    transform: translateX(-70px) translateY(20vh);
+  }
+  60% {
+    transform: translateX(60px) translateY(45vh);
+  }
+  85% {
+    transform: translateX(-45px) translateY(70vh);
+  }
+  100% {
+    transform: translateX(0) translateY(calc(100vh + 150px));
+    opacity: 0.5;
+  }
+}
+
+/* Animation Option 3 */
+@keyframes dropDownRandom3 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(59px) translateY(30vh);
+  }
+  67% {
+    transform: translateX(-90px) translateY(55vh);
+  }
+  88% {
+    transform: translateX(78px) translateY(80vh);
+  }
+  100% {
+    transform: translateX(90px) translateY(calc(100vh + 150px));
+    opacity: 0.5;
+  }
+}
+
+/* Animation Option 4 */
+@keyframes dropDownRandom4 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(-78px) translateY(35vh);
+  }
+  70% {
+    transform: translateX(59px) translateY(60vh);
+  }
+  85% {
+    transform: translateX(-90px) translateY(85vh);
+  }
+  100% {
+    transform: translateX(10) translateY(calc(100vh + 150px));
+    opacity: 0.5;
+  }
+}
+
+
+/* Modal overlay */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dim background */
+  z-index: 1000; /* Ensures modal is on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.gallery-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+}
+
+/* Close button for modal */
+.close-gallery {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 4x4 Grid Gallery */
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 40px; /* Leave some space for the close button */
+}
+
+/* Styles for grid items */
+.media-gallery a {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.media-gallery a:hover {
+  transform: scale(1.05);
+}
+
+.media-gallery img,
+.media-gallery video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,0 +1,127 @@
+/* Mobile Responsiveness: For screens 600px wide or less */
+@media only screen and (max-width: 600px) {
+  /* Adjust overall spacing and font sizes */
+  .candle-count-display {
+    margin-top: 80px;
+    font-size: 24px;
+    padding: 8px 10px;
+  }
+
+  /* Scale down the cake and center it better */
+  .cake {
+    width: 200px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    margin-top: -65px;
+    margin-left: -100px;
+  }
+
+  /* Adjust the plate relative to the cake */
+  .plate {
+    width: 220px;
+    height: 90px;
+    bottom: -8px;
+    left: -8px;
+  }
+
+  /* Scale down the cake layers */
+  .layer {
+    width: 200px;
+    height: 80px;
+  }
+
+  /* Adjust the icing dimensions */
+  .icing {
+    width: 190px;
+    height: 75px;
+    top: 2px;
+    left: 5px;
+  }
+
+  /* Scale down drips if necessary */
+  .drip {
+    width: 40px;
+    height: 50px;
+  }
+  .drip1 {
+    top: 40px;
+    left: 3px;
+    height: 40px;
+    width: 32px;
+  }
+  .drip2 {
+    top: 55px;
+    left: 155px;
+  }
+  .drip3 {
+    top: 40px;
+    left: 60px;
+    width: 64px;
+  }
+
+  /* Adjust the candle size and position if needed */
+  .candle {
+    width: 10px;
+    height: 30px;
+    margin-left: -6px;
+    top: -18px;
+  }
+  .candle:before {
+    width: 10px;
+    height: 5px;
+  }
+  .flame {
+    width: 8px;
+    height: 20px;
+    top: -28px;
+    margin-left: -6px;
+  }
+
+  /* Center and adjust control buttons */
+  .controls {
+    margin: 15px auto;
+  }
+  .controls button {
+    padding: 6px 12px;
+    font-size: 14px;
+    margin: 4px;
+  }
+
+  /* Adjust the footer for smaller screens */
+  .footer {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  /* Adjust modal content for a better mobile view */
+  .modal-content {
+    width: 95%;
+    margin: 20% auto;
+    padding: 15px;
+  }
+}
+
+.balloon {
+  width: 100px;
+  height: 100px;
+  top: -100px; /* Adjust starting position accordingly */
+}
+.rope-svg {
+  top: 100px;  /* Attach directly below the reduced balloon */
+  width: 100px;   /* Match the new balloon width */
+  height: 70px;   /* Adjust rope length for smaller screens */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .media-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* smaller column width */
+    gap: 8px;  /* reduced gap */
+    padding: 10px;  /* reduced padding */
+  }
+  
+  .media-gallery a {
+    padding: 3px;  /* slightly smaller paddings for anchor elements */
+  }
+}

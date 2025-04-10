@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Candle Blow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <!-- Balloon Container -->
+    <div class="balloon-container">
+      <div
+        class="balloon"
+        style="left: 5%; animation-name: dropDownRandom1; animation-delay: 0s"
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 15%;
+          animation-name: dropDownRandom2;
+          animation-delay: 0.2s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 25%;
+          animation-name: dropDownRandom3;
+          animation-delay: 0.4s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 35%;
+          animation-name: dropDownRandom4;
+          animation-delay: 0.6s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 45%;
+          animation-name: dropDownRandom1;
+          animation-delay: 0.8s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="left: 55%; animation-name: dropDownRandom2; animation-delay: 1s"
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 65%;
+          animation-name: dropDownRandom3;
+          animation-delay: 1.2s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 75%;
+          animation-name: dropDownRandom4;
+          animation-delay: 1.4s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 85%;
+          animation-name: dropDownRandom1;
+          animation-delay: 1.6s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <div
+        class="balloon"
+        style="
+          left: 95%;
+          animation-name: dropDownRandom2;
+          animation-delay: 1.8s;
+        "
+      >
+        <svg class="rope-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path
+            d="M50,0 C50,50 30,80 30,100"
+            stroke="#555"
+            stroke-width="4"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="candle-count-display">HAPPY BIRTHDAY xxx!</div>
+
+    <!-- Instruction Toggle Button -->
+    <div
+      class="instruction-container"
+      style="text-align: center; margin: 20px auto; max-width: 600px"
+    >
+      <button
+        id="instructionToggle"
+        class="instruction-toggle"
+        style="
+          background-color: #f4c5d4;
+          color: #ffffff;
+          border: 2px solid #ffffff;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 10px;
+          cursor: pointer;
+        "
+      >
+        Show Instructions
+      </button>
+      <div
+        id="instructionContent"
+        class="instruction-content"
+        style="
+          display: none;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-family: 'Arial', sans-serif;
+          font-size: 16px;
+          color: #333;
+        "
+      >
+        <p>
+          To add a candle, click anywhere on the cake. Blow on the phone or
+          microphone to extinguish candles.
+        </p>
+      </div>
+    </div>
+
+<!-- Controls -->
+<div class="controls">
+  <button id="resetButton">Reset</button>
+  <button id="showLetterButton">Show Card</button>
+  <button id="showVideosBtn">Show favorite pictures</button>
+</div>
+<!-- Modal for Gallery with 4x4 Grid -->
+<div id="galleryModal" class="gallery-modal" style="display: none;">
+  <div class="gallery-content">
+    <button id="closeGallery" class="close-gallery">&times;</button>
+    <div class="media-gallery">
+      <!-- Insert 16 items (4x4 grid) -->
+      <a href="./media/image1.jpg" target="_blank">
+        <img src="./media/image1.jpg" alt="Image 1"/>
+      </a>
+      <a href="./media/image2.jpg" target="_blank">
+        <img src="./media/image2.jpg" alt="Image 2"/>
+      </a>
+      <a href="./media/image3.jpg" target="_blank">
+        <img src="./media/image3.jpg" alt="Image 3"/>
+      </a>
+      <a href="./media/image4.jpg" target="_blank">
+        <img src="./media/image4.jpg" alt="Image 4"/>
+      </a>
+      <a href="./media/video1.mp4" target="_blank">
+        <video src="./media/video1.mp4" controls></video>
+      </a>
+      <a href="./media/video2.mp4" target="_blank">
+        <video src="./media/video2.mp4" controls></video>
+      </a>
+      <a href="./media/video3.mp4" target="_blank">
+        <video src="./media/video3.mp4" controls></video>
+      </a>
+      <a href="./media/video4.mp4" target="_blank">
+        <video src="./media/video4.mp4" controls></video>
+      </a>
+      <!-- Duplicate or add other items to make a total of 16 (4 rows, 4 columns) -->
+      <!-- Example items repeated -->
+      <a href="./media/image5.jpg" target="_blank">
+        <img src="./media/image5.jpg" alt="Image 5"/>
+      </a>
+      <a href="./media/image6.jpg" target="_blank">
+        <img src="./media/image6.jpg" alt="Image 6"/>
+      </a>
+      <a href="./media/image7.jpg" target="_blank">
+        <img src="./media/image7.jpg" alt="Image 7"/>
+      </a>
+      <a href="./media/image8.jpg" target="_blank">
+        <img src="./media/image8.jpg" alt="Image 8"/>
+      </a>
+      <a href="./media/video5.mp4" target="_blank">
+        <video src="./media/video5.mp4" controls></video>
+      </a>
+      <a href="./media/video6.mp4" target="_blank">
+        <video src="./media/video6.mp4" controls></video>
+      </a>
+      <a href="./media/video7.mp4" target="_blank">
+        <video src="./media/video7.mp4" controls></video>
+      </a>
+      <a href="./media/video8.mp4" target="_blank">
+        <video src="./media/video8.mp4" controls></video>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+    <div class="cake">
+      <div id="candleCount" style="display: none"></div>
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+    </div>
+
+    <!-- New Modal for the beautifully styled letter (you can replace "letter.jpg" with your Canva image) -->
+    <div id="letterModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <img
+          id="letterImage"
+          src="./media/Pink and White Fun Happy Birthday Card.png"
+          alt="Letter"
+          style="width: 100%; border-radius: 5px"
+        />
+      </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2"></script>
+    <script>
+      // Toggle instructions display
+      document
+        .getElementById("instructionToggle")
+        .addEventListener("click", function () {
+          var content = document.getElementById("instructionContent");
+          if (
+            content.style.display === "none" ||
+            content.style.display === ""
+          ) {
+            content.style.display = "block";
+            this.textContent = "Hide Instructions";
+            document.querySelector("#resetButton").style.display = "none";
+            document.querySelector("#showLetterButton").style.display = "none";
+          } else {
+            content.style.display = "none";
+            this.textContent = "Show Instructions";
+            document.querySelector("#resetButton").style.display = "inline";
+            document.querySelector("#showLetterButton").style.display =
+              "inline";
+          }
+        });
+    </script>
+  </body>
+</html>
